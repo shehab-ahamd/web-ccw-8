@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>المجموع بالأرقام 🔢 أم المجموع بالأحرف 🔠؟</title>
+  </head>
+  <body>
+    <div>
+      <h2>قم بإدخال مجموع درجاتك بالأرقام</h2>
+      <div class="center">
+        <input
+          dir="rtl"
+          type="text"
+          placeholder="درجتك بالأرقام"
+          id="inputNumber"
+          style="text-align: center; font-size: 1.5rem; margin: 1rem"
+        />
+      </div>
+      <div class="center">
+        <button onclick="getLetterGrade();">درجتك بالحروف</button>
+      </div>
+      <div class="center">
+        <h2 id="status"></h2>
+      </div>
+    </div>
+    <script>
+      function getLetterGrade() {
+        var total = document.getElementById("inputNumber").value;
+        if (total >= 60 && total < 70) {
+          document.getElementById("status").innerHTML = "D";
+        } else if (total >= 70 && total < 80) {
+          document.getElementById("status").innerHTML = "C";
+        } else if (total >= 80 && total < 95) {
+          document.getElementById("status").innerHTML = "B";
+        } else if (total >= 95) {
+          document.getElementById("status").innerHTML = "A";
+        } else {
+          document.getElementById("status").innerHTML = "F";
+        }
+      }
+    </script>
+  </body>
+</html>
