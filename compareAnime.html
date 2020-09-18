@@ -3,9 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>اثنينكم تشوفونAnime 🏯 🎎 🏮 🤔</title>
+    <title>اثنينكم تشوفون Anime 🎎 🏮 🤔</title>
   </head>
   <body>
     <!-- السؤال الثالث -->
+    <!-- قم بالتعرف على مجموعة المسلسلات المشتركة بينك وبين صديقك -->
+    <script>
+      let myAnime = ["Kaiji", "Tokyo Ghoul", "Conan"];
+      let myFriendAnime = ["Attack on Titan", "Conan", "One Piece"];
+      let mutualAnime = [];
+      for (let i = 0; i < myAnime.length; i++) {
+        for (let j = 0; j < myFriendAnime.length; j++) {
+          if (myAnime[i] === myFriendAnime[j]) {
+            mutualAnime.push(myAnime[i]);
+          }
+        }
+      }
+      console.log(mutualAnime);
+    </script>
   </body>
 </html>
