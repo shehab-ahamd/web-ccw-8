@@ -7,5 +7,49 @@
   </head>
   <body>
     <!-- السؤال الثاني -->
+    <!-- عشان لا ننساه consoleبهذا المثال راح نرد نعتمد على ال -->
+
+    <script>
+      let drivers = [
+        {
+          name: "نواف المطيري",
+          age: 24,
+          experience: "جيد",
+          image: "Nawaf.jpg",
+        },
+        {
+          name: "رهف العنزي",
+          age: 34,
+          experience: "ممتاز",
+          image: "Rahaf.jpg",
+        },
+        {
+          name: "رتاج العلي",
+          age: 16,
+          experience: "لا بأس",
+          image: "Retaj.jpg",
+        },
+        {
+          name: "موضي البناي",
+          age: 17,
+          experience: "سيء",
+          image: "Moudhi.jpg",
+        },
+      ];
+
+      function licenseTest(drivers) {
+        for (let i = 0; i < drivers.length; i++) {
+          if (drivers[i].age >= 17 && drivers[i].experience !== "سيء") {
+            console.log("تفضل/ي رخصتك يا " + drivers[i].name);
+          } else {
+            console.log("نعتذر منك، المرة الياية إن شاء الله");
+          }
+        }
+      }
+      // onclick انتبه إنه إحنا مو قاعدين نستخدم زر يعني ما نقدر نستخدم
+
+      // function call
+      licenseTest(drivers);
+    </script>
   </body>
 </html>
