@@ -12,10 +12,8 @@
       <h2 style="text-align: center; font-size: 1.2rem; margin: 1rem">
         💵 أدخل المبلغ المطلوب تحويله
         <br />
-        🛫 والدولة التي تود السفر إليها
+        🛩 واختر علم الدولة التي تود السفر إليها
         <br />
-        <br />
-        (USA - England - UAE - Turkey) اختر من بين
       </h2>
       <div class="center">
         <input
@@ -25,20 +23,12 @@
           id="amount"
           style="text-align: center; font-size: 1rem; margin: 0.4rem"
         />
-      </div>
-      <div class="center">
-        <input
-          dir="rtl"
-          type="text"
-          placeholder="الدولة"
-          id="country"
-          style="
-            text-align: center;
-            font-size: 1rem;
-            margin: 0.4rem;
-            margin-bottom: 1rem;
-          "
-        />
+        <select id="country-list">
+          <option value="USA">🇺🇸</option>
+          <option value="England">🏴󠁧󠁢󠁥󠁮󠁧󠁿</option>
+          <option value="UAE">🇦🇪</option>
+          <option value="Turkey">🇹🇷</option>
+        </select>
       </div>
       <div class="center">
         <button onclick="changeCurr();">احسب</button>
@@ -50,7 +40,8 @@
     <script>
       function changeCurr() {
         let amount = document.getElementById("amount").value;
-        let country = document.getElementById("country").value;
+        let sel = document.getElementById("country-list");
+        let country = sel.value;
         //   KWD to US Dollar
         if (country == "USA") {
           newAmount = amount * 3.27;
