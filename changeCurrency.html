@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>تحويل عملات 💰💰</title>
+  </head>
+  <body>
+    <!-- السؤال الأول -->
+    <div>
+      <h2 style="text-align: center; font-size: 1.2rem; margin: 1rem">
+        💵 أدخل المبلغ المطلوب تحويله
+        <br />
+        🛫 والدولة التي تود السفر إليها
+        <br />
+        <br />
+        USA و England و UAE و Turkey اختر من بين
+      </h2>
+      <div class="center">
+        <input
+          dir="rtl"
+          type="text"
+          placeholder="المبلغ"
+          id="amount"
+          style="text-align: center; font-size: 1rem; margin: 0.4rem"
+        />
+      </div>
+      <div class="center">
+        <input
+          dir="rtl"
+          type="text"
+          placeholder="الدولة"
+          id="country"
+          style="
+            text-align: center;
+            font-size: 1rem;
+            margin: 0.4rem;
+            margin-bottom: 1rem;
+          "
+        />
+      </div>
+      <div class="center">
+        <button onclick="changeCurr();">احسب</button>
+      </div>
+      <div class="center">
+        <h3 id="newAmount">0</h3>
+      </div>
+    </div>
+    <script>
+      function changeCurr() {
+        let amount = document.getElementById("amount").value;
+        let country = document.getElementById("country").value;
+        //   KWD to US Dollar
+        if (country == "USA") {
+          newAmount = amount * 3.27;
+          document.getElementById("newAmount").innerHTML =
+            newAmount + " US Dollar";
+          //   KWD to to British Pound
+        } else if (country == "England") {
+          newAmount = amount * 2.52;
+          document.getElementById("newAmount").innerHTML =
+            newAmount + " British Pound";
+          //   KWD to UAE Dirham
+        } else if (country == "UAE") {
+          newAmount = amount * 12.01;
+          document.getElementById("newAmount").innerHTML =
+            newAmount + " Emirati Dirham";
+          //   KWD to Turkish Lira
+        } else if (country == "Turkey") {
+          newAmount = amount * 24.68;
+          document.getElementById("newAmount").innerHTML =
+            newAmount + " Turkish Lira";
+        }
+      }
+    </script>
+  </body>
+</html>
