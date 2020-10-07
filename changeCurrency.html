@@ -37,31 +37,44 @@
         <h3 id="newAmount">0</h3>
       </div>
     </div>
+
+    <!-- أولاً: قم بفتح هذه الصفحة في المتصفح لتأخذ فكرة بسيطة عن التمرين -->
+
+    <!-- script داخل وسم changeCurr() اسمها function ثانياً: قم بإنشاء دالة أو -->
+
+    <!-- ----------------------------------------------------------------- -->
+    <!--  هي دالة تقوم بتحويل قيمة المبلغ من الدينار الكويتي changeCurr()  -->
+    <!--  إلى العملة المستخدمة في الدولة التي تختارها                      -->
+    <!-- ----------------------------------------------------------------- -->
+
     <script>
-      function changeCurr() {
+      // عرف الدالة
+      {
         let amount = document.getElementById("amount").value;
         let sel = document.getElementById("country-list");
         let country = sel.value;
-        //   KWD to US Dollar
-        if (country == "USA") {
+        let newAmount = 0;
+        // country قم باستخدام الجمل الشرطية المناسبة لاختبار قيمة المتغير
+        // USA هي county مثال: إن كانت قيمة
+        // من الدينار الكويتي إلى الدولار الأمريكي amount قم بتحويل المبلغ
+        /*
+          المعادلة     الدولة
+          USA        amount * 3.27
+          England    amount * 2.52
+          UAE        amount * 12.01
+          Turkey     amount * 24.68
+        */
+        if (condition) {
+          // دينار كويتي إلى دولار أمريكي
           newAmount = amount * 3.27;
           document.getElementById("newAmount").innerHTML =
             newAmount + " دولار أمريكي";
-          //   KWD to to British Pound
-        } else if (country == "England") {
-          newAmount = amount * 2.52;
-          document.getElementById("newAmount").innerHTML =
-            newAmount + " باوند بريطاني";
-          //   KWD to UAE Dirham
-        } else if (country == "UAE") {
-          newAmount = amount * 12.01;
-          document.getElementById("newAmount").innerHTML =
-            newAmount + " درهم إماراتي";
-          //   KWD to Turkish Lira
-        } else if (country == "Turkey") {
-          newAmount = amount * 24.68;
-          document.getElementById("newAmount").innerHTML =
-            newAmount + " ليرة تركية";
+        } else if (condition) {
+          // دينار كويتي إلى باوند بريطاني
+        } else if (condition) {
+          // دينار كويتي إلى درهم إماراتي
+        } else {
+          // دينار كويتي إلى ليرة تركية
         }
       }
     </script>

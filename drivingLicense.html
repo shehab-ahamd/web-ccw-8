@@ -10,46 +10,23 @@
     <!-- عشان لا ننساه consoleبهذا المثال راح نرد نعتمد على ال -->
 
     <script>
-      let drivers = [
-        {
-          name: "نواف المطيري",
-          age: 24,
-          experience: "جيد",
-          image: "Nawaf.jpg",
-        },
-        {
-          name: "رهف العنزي",
-          age: 34,
-          experience: "ممتاز",
-          image: "Rahaf.jpg",
-        },
-        {
-          name: "رتاج العلي",
-          age: 16,
-          experience: "لا بأس",
-          image: "Retaj.jpg",
-        },
-        {
-          name: "موضي البناي",
-          age: 17,
-          experience: "سيء",
-          image: "Moudhi.jpg",
-        },
-      ];
+      // 1
+      /* objects تحتوي على array قم بتعريف
+         drivers <= arrayسمي ال
+         لكل سائق object <= arrayحط داخل ال
+         حط اسم السائق وعمره object داخل كل
+      */
 
-      function licenseTest(drivers) {
-        for (let i = 0; i < drivers.length; i++) {
-          if (drivers[i].age >= 17 && drivers[i].experience !== "سيء") {
-            console.log("تفضل/ي رخصتك يا " + drivers[i].name);
-          } else {
-            console.log("نعتذر منك، المرة الياية إن شاء الله");
-          }
-        }
-      }
+      // 2
+      /* licenseTest() اسمها function قم بتعريف
+         خلي الدالة تختبر عمر كل سائق
+         اطبع "تفضل/ي رخصتك يا ..." <= لو عمر السائق 17 أو أعلى
+                          اطبع "نعتذر منك، المرة الياية إن شاء الله" <= غير جذي
+      */
+
       // onclick انتبه إنه إحنا مو قاعدين نستخدم زر يعني ما نقدر نستخدم
 
-      // function call
-      licenseTest(drivers);
+      // function call - function عشان جذي نادي ال
     </script>
   </body>
 </html>
