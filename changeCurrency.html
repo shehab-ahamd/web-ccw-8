@@ -49,7 +49,7 @@
 
     <script>
       // عرف الدالة
-      {
+     function changeCurr(){
         let amount = document.getElementById("amount").value;
         let sel = document.getElementById("country-list");
         let country = sel.value;
@@ -64,19 +64,29 @@
           UAE        amount * 12.01
           Turkey     amount * 24.68
         */
-        if (condition) {
+        if (country=="USA") {
           // دينار كويتي إلى دولار أمريكي
           newAmount = amount * 3.27;
           document.getElementById("newAmount").innerHTML =
             newAmount + " دولار أمريكي";
-        } else if (condition) {
+        } else if (country=="England") {
           // دينار كويتي إلى باوند بريطاني
-        } else if (condition) {
+          newAmount = amount *  2.52;
+          document.getElementById("newAmount").innerHTML =
+            newAmount + " باوند بريطاني";
+        } else if (country=="UAE") {
           // دينار كويتي إلى درهم إماراتي
+          newAmount = amount *  12.01
+          document.getElementById("newAmount").innerHTML =
+            newAmount + " درهم اماراتي";
         } else {
           // دينار كويتي إلى ليرة تركية
+          newAmount = amount *  24.68
+          document.getElementById("newAmount").innerHTML =
+            newAmount + " ليرة تركية";
         }
       }
+      changeCurr();
     </script>
   </body>
 </html>
